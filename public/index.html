@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Idea Wall</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Idea Wall</h1>
+  <ul id="ideas"></ul>
+  <script>
+    fetch('/api/ideas')
+      .then(res => res.json())
+      .then(data => {
+        const ul = document.getElementById("ideas");
+        data.forEach(idea => {
+          const li = document.createElement("li");
+          li.textContent = idea.title + ": " + idea.description;
+          ul.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>

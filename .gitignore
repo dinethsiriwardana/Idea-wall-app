@@ -1,0 +1,12 @@
+node_modules/
+.env
+.DS_Store
+*.log
+.idea/
+.vscode/
+*.swp
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+coverage/
+openapi.yaml
